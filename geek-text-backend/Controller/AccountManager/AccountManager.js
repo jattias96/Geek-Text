@@ -1,5 +1,9 @@
-import{IncomingForm} from 'formidable'//we are getting information
-import{user} from '../../models/userModel'
+import pkg from 'formidable';
+const {IncomingForm} = pkg;
+//import{IncomingForm} from 'formidable'//we are getting information
+//import{user} from '../../models/userModel'
+import{user} from '../../models/userModel.js';
+
 class AccountManager{
     UpdateUSerInfo(reques,response){
         const form = new IncomingForm();

@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import AuthRoute from './routes/Auth/Auth'
+import AuthRoute from './routes/Auth/Auth.js'
 import booksRouter from './routes/books.js'
 import genresRouter from './routes/genres.js'
 import authorsRouter from './routes/authors.js'
@@ -11,7 +11,7 @@ dotenv.config();
 
 
 
-//import AccountManager from './routes/AccountManager/AccountManager'
+import AccountManager from './routes/AccountManager/AccountManager.js';
 //============================================Middlewares==========================================
 server.use(cors());
 server.use(express.json());

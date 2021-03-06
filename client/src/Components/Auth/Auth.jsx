@@ -57,7 +57,7 @@ const Auth = () => {
 
   const LoginUser = (e)=>{
     const baseURL = {
-      dev:'http://localhost:3000/api/signin',
+      dev:'http://localhost:9000/api/signin',
       prod:''
     }
     const url = process.env.NODE_ENV === "production" ? baseURL.prod : baseURL.dev
@@ -79,22 +79,23 @@ const Auth = () => {
   const SignupUser = (e)=>{
     e.preventDefault();
     const baseURL = {
-      dev:'http://localhost:3000/api/signup',
+      dev:'http://localhost:9000/api/signup',
       prod:''
     }
     const url = process.env.NODE_ENV === "production" ? baseURL.prod : baseURL.dev
 
-
-    // email, name, nickname, password are required
+        // email, name, nickname, password are required
     // The nickname will be the same as the username
     const form_data = new FormData();
     form_data.append('email', email_signup);
     form_data.append('password', password_signup);
     form_data.append('nickname', username_signup)
     form_data.append('name', firstname_signup)
+
+    
     axios.post(url, form_data).then(res=>{
       alert(res.data.msg)
-    }).catch(err=>{
+    }).catch(err=>{      
       alert(err.response.data.msg)
     })
 
