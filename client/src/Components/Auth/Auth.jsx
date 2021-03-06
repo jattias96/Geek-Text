@@ -107,7 +107,7 @@ const Auth = () => {
           {!showforgotPassword ? (
             <form className="account__form">
               <h3 className="account__form-header">Login</h3>
-              <p>Welcome back Sigin in to your account</p>
+              <p>Welcome back sign in in to your account</p>
               <div className="form-control">
                 <label htmlFor="email_signin">Email</label>
                 <input onChange={handleLoginChange} id="email_signin" type="text" required  />
@@ -159,9 +159,9 @@ const Auth = () => {
             <h3 className="account__form-header">Create New Account</h3>
             <p>Create your own Account</p>
             <div className="form-control">
-              <label  htmlFor="name">First Name</label>
+              <label  htmlFor="name">Full Name</label>
               <input style={{marginBottom:'1rem'}} onChange={handleSignupChange} id="firstname_signup" type="text" required  />
-              <label htmlFor="name">Username</label>
+              <label htmlFor="name">Nickname</label>
               <input onChange={handleSignupChange} id="username_signup" type="text" required  />
             </div>
             <div className="form-control">

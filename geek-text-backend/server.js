@@ -35,7 +35,7 @@ server.use('/genres', genresRouter);
 
 server.use('/authors', authorsRouter);
 //===================================Server connection & Configs===================================
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4025;
 server.listen(PORT, () => {
   console.log(`Server started on PORT ${PORT}`);
 });
