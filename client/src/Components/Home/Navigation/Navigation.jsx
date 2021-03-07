@@ -24,6 +24,12 @@ export const Navigation = () =>{
                 <div className = "nav-right-addBook nav-link">
                     <h4 className = "links">Add New Book</h4>
                 </div>
+
+                <div className = "nav-right-ratings nav-link">
+                    <Link to = "/ratings" className = "Router_Link">
+                        <h4 className = "links">Add a Rating</h4>
+                    </Link>
+                </div>
             </div>
         </div>   
     )
