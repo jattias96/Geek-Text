@@ -7,12 +7,19 @@ function App() {
     <Router >
       <Navigation/>
       <Switch>
+
           <Route path = '/auth' exact = {true}>
               <Auth/>
           </Route>
+
           <Route path = '/' exact = {true}>
               <Home />
           </Route>
+
+          <Route path = '/browse' exact = {true}>
+              
+          </Route>
+
       </Switch>
     </Router>
   );
