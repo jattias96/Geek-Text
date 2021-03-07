@@ -7,14 +7,14 @@
 
 .Router_Link{
   text-decoration: none;
-  color: black;
+  color: #4a4a4d;
 }
 
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 :root {
-  --primary-color: #fed700;
+  --primary-color: #7A9EA7;
   --secondary-color: #0e8a54;
   --tertiary-color: #333e48;
   --info-color: #117aff;
@@ -82,9 +82,9 @@ img {
 
 .btn-primary:hover,
 .btn-light:hover {
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   color: var(--light-color);
-  border: 1px solid var(--tertiary-color);
+  border: 1px solid var(--primary-color);
   font-size: 0.72rem;
 }
 
@@ -92,6 +92,7 @@ img {
   width: 100%;
   padding: 1rem;
   display: flex;
+  align-items: center;
 }
 
 .col-1-2 {
