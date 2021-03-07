@@ -1,5 +1,6 @@
 import Auth from './Components/Auth/Auth'
 import {Home} from './Components/Home/Home'
+import Cart from './Components/Cart/Cart'
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import {Navigation} from './Components/Home/Navigation/Navigation'
 function App() {
@@ -12,6 +13,9 @@ function App() {
           </Route>
           <Route path = '/' exact = {true}>
               <Home />
+          </Route>
+          <Route path = '/cart/:id?'>
+              <Cart/>
           </Route>
       </Switch>
     </Router>
