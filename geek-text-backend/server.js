@@ -1,14 +1,16 @@
 import express from "express";
 import cors from "cors";
-import { config } from "dotenv";
-import { connect } from "mongoose";
-import AuthRoute from './routes/Auth.js'
-config(); // Allows us to have access to our environment variables
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import AuthRoute from './routes/users.js'
+import booksRouter from './routes/books.js'
+import genresRouter from './routes/genres.js'
+import authorsRouter from './routes/authors.js'
 const server = express();
-
+dotenv.config(); 
 //============================================Middlewares==========================================
 server.use(cors());
-
+server.use(express.json());
 //=====================================MongoDb connection & configs===============================
 const mongoURI = process.env.mongoURI;
 const connectionOptions = {
@@ -17,7 +19,7 @@ const connectionOptions = {
   useCreateIndex: true,
   useFindAndModify: false,
 };
-connect(mongoURI, connectionOptions, (error) => {
+mongoose.connect(mongoURI, connectionOptions, (error) => {
   if (error) {
     return console.log(error);
   }
@@ -27,8 +29,13 @@ connect(mongoURI, connectionOptions, (error) => {
 //=================================================================================================
 server.use(AuthRoute)
 
+server.use('/books', booksRouter);
+
+server.use('/genres', genresRouter);
+
+server.use('/authors', authorsRouter);
 //===================================Server connection & Configs===================================
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Server started on PORT ${PORT}`);
 });
