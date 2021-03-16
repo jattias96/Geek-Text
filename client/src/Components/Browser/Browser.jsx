@@ -59,7 +59,7 @@ export default class Browser extends React.Component {
                     })
                 }
                 else {
-                    console.log("Empty Cart")
+                    console.log("No books recieved")
                 }
             })
             .catch((error) => {
